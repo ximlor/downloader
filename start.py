@@ -10,7 +10,7 @@ from main.down import *
 
 if __name__ == '__main__':
     pool = Pool(16)
-    items = range(1, 2)
+    items = range(1, 10)
     pool.map(downLoad, items)
     pool.close()
     pool.join()
