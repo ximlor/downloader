@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+
+### Applications Code Container #############################
+
+    applications:
+      image: tianon/true
+      volumes:
+        - ./:/downloader
+
+### Py Container #########################################
+
+    py:
+      build: ./docker/py
+      volumes_from:
+        - applications
+      tty: true
