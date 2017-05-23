@@ -17,7 +17,7 @@ def write(filename, content):
 
 
 def log(filename, content):
-    with open(filename, 'a') as file:
+    with open(filename, 'a+') as file:
         file.write(content)
 
 
@@ -27,6 +27,7 @@ def downLoad(item):
     # url = 'http://img1.gtimg.com/cq/pics/hv1/115/52/2204/143328475.jpg'
     r = requests.get(url)
     log_path = create_path('/storage/log')
+    # log_path = create_path('./log')
     log_file = '%s/mp4.log' % log_path
     if r.status_code == requests.codes.ok:
         base_path = create_path('/storage/mp4')
@@ -41,3 +42,4 @@ def downLoad(item):
             pass
     else:
         log(log_file, '%s-404\n' % item)
+        print('404\n')
