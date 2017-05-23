@@ -42,4 +42,3 @@ def downLoad(item):
             pass
     else:
         log(log_file, '%s-404\n' % item)
-        print('404\n')
