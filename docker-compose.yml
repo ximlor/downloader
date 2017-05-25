@@ -16,3 +16,4 @@ services:
       build: ./docker/py
       volumes_from:
         - applications
+      tty: false
