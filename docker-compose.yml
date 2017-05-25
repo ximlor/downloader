@@ -17,3 +17,15 @@ services:
       volumes_from:
         - applications
       tty: false
+
+### Static Server Container ##################################
+
+    static:
+      build:
+        context: ./docker/static
+      volumes_from:
+          - applications
+      volumes:
+          - ./docker/static/sites:/etc/nginx/sites-available
+      ports:
+          - "8080:80"
