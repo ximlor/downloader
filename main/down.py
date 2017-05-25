@@ -22,8 +22,8 @@ def log(filename, content):
 
 
 def downLoad(item):
-    url = 'http://120.52.73.73/data1.cache.directory/media/filenames/iphone/%s.mp4' % item
-    # url = 'http://120.52.73.73/data1.cache.directory/media/filenames/xphone/%s.mp4' % item
+    url = 'http://120.52.73.73/data1.cache.directory/media/videos/iphone/%s.mp4' % item
+    # url = 'http://120.52.73.73/data1.cache.directory/media/videos/xphone/%s.mp4' % item
     # url = 'http://img1.gtimg.com/cq/pics/hv1/115/52/2204/143328475.jpg'
 
     log_path = create_path('/storage/log')
