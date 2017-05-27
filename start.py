@@ -11,6 +11,6 @@ from main.down import *
 if __name__ == '__main__':
     pool = Pool(16)
     items = range(1, 10)
-    pool.map(downLoad, items)
+    pool.map(downLoad2, items)
     pool.close()
     pool.join()
