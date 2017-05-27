@@ -64,7 +64,7 @@ def downLoad2(item):
             'lr': '0',
             'cv2': '28ddaeccb7119a0e24879d04473f9de9',
             'cv3': '3384243a1593581e105bed356b1a1383',
-            'file': '/videos/0/%s/%s.mp4' % item,
+            'file': '/videos/0/%s/%s.mp4' % (item, item),
         })
         if r.status_code == requests.codes.ok:
             try:
