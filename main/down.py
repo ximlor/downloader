@@ -1,7 +1,7 @@
 # coding: utf-8
 import requests
 import os
-
+from time import sleep
 
 def create_path(path):
     if os.path.exists(path):
@@ -65,7 +65,7 @@ def downLoad2(item):
             'cv2': '28ddaeccb7119a0e24879d04473f9de9',
             'cv3': '3384243a1593581e105bed356b1a1383',
             'file': '/videos/0/%s/%s.mp4' % (item, item),
-        }, headers={'Connection': 'close'})
+        }, headers={'Connection': 'closeMax retries exceeded'})
         if r.status_code == requests.codes.ok:
             try:
                 print('ok')
@@ -78,3 +78,4 @@ def downLoad2(item):
         else:
             print('not')
             log(log_file, '%s-404\n' % item)
+    sleep(30)
